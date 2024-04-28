@@ -1,0 +1,100 @@
+@media screen and (min-width: 768px) and (max-width: 1539px) {
+    :root {
+        --rep-maxwidth: 996px;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 1539px){
+    max-width: 996px;
+}
+footer {
+    display: block;
+    unicode-bidi: isolate;
+}
+
+.main-footer{
+    box-sizing: border-box;
+    font-family: 'Eugenio Sans Text','Helvetica Neue',Helvetica,sans-serif;
+    position: relative;
+    z-index: 1;
+    max-width: var(--rep-maxwidth);
+    margin: 0 auto;
+}
+
+.first-footer {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color: #fff;
+    border-top: 2px solid #dedede;
+    /*display: none;*/
+}
+.footer-first-title {
+    margin-top: 0;
+    text-transform: uppercase;
+    color: #454545;
+    font-family: inherit;
+    position: relative;
+}
+
+.footer-first-togglebtn {
+    display: block;
+    cursor: pointer;
+    position: relative;
+
+}
+@media screen and (min-width: 768px) {
+    .footer-first-title {
+        font-size: 22px;
+    }
+}
+.footer-first-togglebtn:before {
+    content: "Espandi";
+    display: inline-block;
+}
+.rep-page-footer.is-open .footer-first-togglebtn:before {
+    content: "Riduci";
+}
+.footer-layer-title {
+    display: flex;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.second-footer{
+    background-color: #3c3d41;
+    color: #fff;
+    font-size: 12px;
+    line-height: 10px;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    }
+.third-footer{
+        color: #fff;
+        font-size: 12px;
+        line-height: 10px;
+        padding-top: 18px;
+        padding-bottom: 18px;
+    padding-left: 10px;
+        background-color: #4f5054;
+    }
+
+
+@media screen and (min-width: 768px) {
+    .footer-first-title:before {
+        content: "";
+        position: absolute;
+        top: -17px;
+        left: 0;
+        right: 0;
+        display: block;
+        height: 2px;
+        width: 100%;
+        background-color: #454545;
+    }
+}
+@media screen and (min-width: 768px) {
+    .first-footer {
+        display: block;
+    }
+}
