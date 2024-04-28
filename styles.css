@@ -1,3 +1,7 @@
+
+body {
+    font-family: 'Eugenio Sans Text', 'Helvetica Neue', Helvetica, sans-serif;
+}
 @media screen and (min-width: 768px) and (max-width: 1539px) {
     :root {
         --rep-maxwidth: 996px;
@@ -10,7 +14,6 @@ footer {
     display: block;
     unicode-bidi: isolate;
 }
-
 .main-footer{
     box-sizing: border-box;
     font-family: 'Eugenio Sans Text','Helvetica Neue',Helvetica,sans-serif;
@@ -20,12 +23,12 @@ footer {
     margin: 0 auto;
 }
 
-.first-footer {
+
+.first-footer{
     padding-top: 15px;
     padding-bottom: 15px;
     background-color: #fff;
     border-top: 2px solid #dedede;
-    /*display: none;*/
 }
 .footer-first-title {
     margin-top: 0;
@@ -35,24 +38,6 @@ footer {
     position: relative;
 }
 
-.footer-first-togglebtn {
-    display: block;
-    cursor: pointer;
-    position: relative;
-
-}
-@media screen and (min-width: 768px) {
-    .footer-first-title {
-        font-size: 22px;
-    }
-}
-.footer-first-togglebtn:before {
-    content: "Espandi";
-    display: inline-block;
-}
-.rep-page-footer.is-open .footer-first-togglebtn:before {
-    content: "Riduci";
-}
 .footer-layer-title {
     display: flex;
     align-items: center;
@@ -79,22 +64,28 @@ footer {
         background-color: #4f5054;
     }
 
-
 @media screen and (min-width: 768px) {
-    .footer-first-title:before {
-        content: "";
-        position: absolute;
-        top: -17px;
-        left: 0;
-        right: 0;
-        display: block;
-        height: 2px;
-        width: 100%;
-        background-color: #454545;
+    .footer-first-title {
+        font-size: 22px;
     }
 }
 @media screen and (min-width: 768px) {
     .first-footer {
         display: block;
     }
+}
+@media screen and (max-width: 768px) {
+    .first-footer {
+        display: none;
+    }
+}
+h1 {
+    display: block;
+    font-size: 2em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    unicode-bidi: isolate;
 }
