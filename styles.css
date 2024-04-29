@@ -11,6 +11,109 @@ body {
     max-width: 996px;
 }
 
+.main-header{
+
+    border-bottom: 1px #e9e9ee solid;
+    min-height: 50px;
+}
+header{
+    box-sizing: border-box;
+    font-family: 'Eugenio Sans Text','Helvetica Neue',Helvetica,sans-serif;
+    position: relative;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 12px;
+    white-space: nowrap;
+    letter-spacing: .6px;
+    text-align: center;
+    max-width: var(--rep-maxwidth);
+    margin: 0 auto;
+
+    border-bottom: gray;
+}
+.sub-header{
+    padding: 20px 0px;
+}
+.sub-header-item{
+    margin: 0px 15px;
+}
+.weather-info{
+    padding-top: 16px;
+    font: 500 13px/1 'Eugenio Text',Georgia,Times,'Times New Roman',serif;
+    text-transform: none;
+}
+.meteo-temp{
+    font-size: 16px;
+}
+.weather-search {
+    font-size: 14px;
+    width: 100px;
+    border-bottom: 1px #f0f0f0 solid;
+
+}
+.weather-search input{
+    border: 0;
+    box-shadow: none;
+}
+.weather-search input:focus{
+    border-bottom-color: #000;
+    outline: 0;
+}
+.third-header{
+    border: 1px solid #999;
+}
+.third-header-btn{
+    font-weight: 500;
+    padding: 5px;
+    font-family: 'Eugenio Sans Text','Helvetica Neue',Helvetica,sans-serif;
+}
+.third-header button:focus:not(:focus-visible){
+
+    outline: 0;
+    border: 0;
+}
+.third-header-btn{
+    font-weight: 500;
+    padding: 5px;
+    font-family: 'Eugenio Sans Text','Helvetica Neue',Helvetica,sans-serif;
+}
+.main-logo{
+    min-height: 75px;
+}
+.nav-central-button{
+    text-decoration: none;
+    color: black;
+    align-content: center;
+    text-transform: uppercase;
+}
+.nav-central-button:hover{
+    color: #4b88ca;
+}
+
+.nav-header-item{
+    font-size: 12px;
+    font-weight: 500;
+    padding: 0 16px;
+}
+.nav-small-logo{
+    width: 20px;
+    height: 20px;
+
+}
+.nav-separator{
+
+}
+.nav-header-item:hover{
+    color: #4b88ca;
+}
+.main{
+    box-sizing: border-box;
+    font-family: 'Eugenio Sans Text','Helvetica Neue',Helvetica,sans-serif;
+    position: relative;
+
+    max-width: var(--rep-maxwidth);
+    margin: 0 auto;
+}
 footer {
     display: block;
     unicode-bidi: isolate;

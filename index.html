@@ -15,6 +15,16 @@
           integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
           crossorigin="anonymous"
     >
+    <!-- Fontawesome -->
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+            integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+    />
+
+
     <script
             src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
@@ -37,14 +47,168 @@
 <!-- Header -->
 <!------------>
 <header>
-    Head
+    <div id="sticky-navbar" class="nav-primary-top row align-content-center container main-header">
+        <div class="col col-3 col-md-4 p-0 d-flex justify-content-start">
+            <a type="button" class="btn nav-header-item" id="sidenav-left-toggle-btn" onclick="onLeftSidenavToggle(this)">
+                <i class="fas fa-bars m-auto"></i>
+                <span>Menu</span>
+            </a>
+            <a type="button" class="btn nav-header-item" id="sidenav-left-search" onclick="onLeftSidenavToggle(this)">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <span>Cerca</span>
+            </a>
+            <a type="button" class="btn nav-header-item"  onclick="onLeftSidenavToggle(this)">
+                <i class="fa-solid fa-bell"></i>
+                <span>Notifiche</span>
+            </a>
+        </div>
+
+        <div class="col col-6 col-md-4 d-flex d-inline-flex p-0 justify-content-center">
+            <a class="nav-central-button" href="#">Abbonati</a>
+        </div>
+
+        <div class="col col-3 col-md-4 p-0 d-flex align-items-center justify-content-end ">
+            <a  type="button" class="btn search-btn nav-header-item" onclick="toggleSearchbar()">
+                Gedi Smile
+            </a>
+            <a id="sidenav-right-toggle-btn" type="button" class="btn user-menu mx-1 p-0 d-flex align-items-end nav-header-item" onclick="onRightSidenavToggle(this)">
+                <img src="images/smallR.svg" class="nav-small-logo" alt="rep_logo"/>
+            </a>
+            <a id="searchbar-toggle-btn" type="button" class="btn search-btn nav-header-item" onclick="toggleSearchbar()">
+                Accedi
+                <i class="fa fa-user" aria-hidden="true"></i>
+            </a>
+        </div>
+    </div>
+
+<!--Second header-->
+    <div class="nav-primary-middle col d-flex justify-content-center sub-header">
+        <div class="container">
+            <div class="col-md-auto">
+                <div class="d-flex justify-content-center">
+                    <img id="logo" src="images/repubblica-logo.svg" alt="LaRepLogo" class="main-logo"/>
+
+                </div>
+                <div class="d-flex justify-content-center weather-info">
+                    <div id="today-date"class="sub-header-item">29 Aprile 2024 - Aggiornato alle 13.45</div>
+                    <div class="d-flex justify-content-center">
+                        <img src="images/sun-color-icon.svg" class="nav-small-logo" alt="rep_logo"/>
+                        <div class="meteo-temp">
+                            22°
+                        </div>
+                        <div class="weather-search">
+                            <label>
+                                <input type="text" class="weather-search" placeholder="Firenze">
+                            </label>
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+    <!--Third header-->
+    <div class="d-flex justify-content-center third-header" style="line-height: 40px">
+        <nav class="navbar navbar-light " style="padding: 0">
+            <div class="container-fluid ">
+                <div class="dropdown ">
+                    <button class="btn  dropdown-toggle third-header-btn" type="button" id="" data-bs-toggle="dropdown" aria-expanded="false">
+                        Sezioni
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-dark col" >
+                        <li><a class="dropdown-item active" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Separated link</a></li>
+                    </ul>
+                </div>
+                <div class="dropdown">
+                    <button class="btn  dropdown-toggle third-header-btn" type="button" id="" data-bs-toggle="dropdown" aria-expanded="false">
+                        Edizioni Locali
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-dark col" >
+                        <li><a class="dropdown-item active" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Separated link</a></li>
+                    </ul>
+                </div>
+                <div class="dropdown">
+                    <button class="btn  dropdown-toggle third-header-btn" type="button" id="" data-bs-toggle="dropdown" aria-expanded="false">
+                        Il Quotidiano
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-dark col" >
+                        <li><a class="dropdown-item active" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Separated link</a></li>
+                    </ul>
+                </div>
+                <div class="dropdown">
+                    <button class="btn  dropdown-toggle third-header-btn" type="button" id="" data-bs-toggle="dropdown" aria-expanded="false">
+                        Servizi
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-dark col" >
+                        <li><a class="dropdown-item active" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Separated link</a></li>
+                    </ul>
+                </div>
+                <div class="dropdown">
+                    <button class="btn  dropdown-toggle third-header-btn" type="button" id="" data-bs-toggle="dropdown" aria-expanded="false">
+                        A-Z
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-dark col" >
+                        <li><a class="dropdown-item active" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Separated link</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    </div>
+
+
 </header>
 
 <!------------------>
 <!-- Main content -->
 <!------------------>
-<main>
-    Main
+<main class="main">
+    <div class="d-flex row headline mb-5">
+        <!-- Main news -->
+        <div class="main-news mb-5">
+            <article class="main-article row pb-3 mb-2 border-bottom">
+                <div class="col-12 p-0 row d-contents justify-content-center">
+                    <div class="col-12 col-sm-6 col-md-12 col-xl-5 p-0 pe-xl-1">
+                        <a class="subscriber-only" href="#"><h2 class="fw-bolder text-center">Lorem ipsum dolor sit amet incidunt ea ullam hic labore veniam</h2></a>
+<!--                        <img src="images/placeholder.png" alt="Main image" class="w-100 d-inline-block d-sm-none d-md-inline-block d-xl-none">-->
+                        <div class="text-center">Lorem ipsum dolor sit amet incidunt ea ullam hic labore veniam, Lorem ipsum dolor sit amet incidunt ea ullam hic labore veniam</div>
+                    </div>
+<!--                    <img src="images/placeholder.png" alt="Main image" class="mb-auto col-12 col-sm-6 col-md-12 col-xl-7 pb-xl-1 p-0 d-none d-sm-inline-block d-md-none d-xl-inline-block">-->
+                </div>
+            </article>
+
+
+        </div>
+
+
+    </div>
+
+
 </main>
 
 <!------------>
