@@ -4,18 +4,22 @@ body {
 }
 @media screen and (min-width: 768px)  {
     :root {
-        --rep-maxwidth: 996px;
+        --rep-maxwidth: 768px;
     }
 }
-@media screen and (min-width: 768px) {
-    max-width: 996px;
-}
 
-.main-header{
+
+.main-header-cont{
 
     border-bottom: 1px #e9e9ee solid;
     min-height: 50px;
 }
+
+.main-header{
+
+
+}
+
 header{
     box-sizing: border-box;
     font-family: 'Eugenio Sans Text','Helvetica Neue',Helvetica,sans-serif;
@@ -26,10 +30,25 @@ header{
     white-space: nowrap;
     letter-spacing: .6px;
     text-align: center;
-    max-width: var(--rep-maxwidth);
     margin: 0 auto;
 
     border-bottom: gray;
+}
+
+header .nav-primary-top.fixed-top {
+    position: fixed;
+    top: 0;
+    align-content: center;
+    background-color: white;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.25);
+}
+.hidden{
+    display: none;
+}
+.btn-subscribe{
+    padding: 17px 16px ;
+    background-color: #4b88ca;
+    color: #fff ;
 }
 .sub-header{
     padding: 20px 0px;
@@ -86,6 +105,7 @@ header{
     align-content: center;
     text-transform: uppercase;
 }
+
 .nav-central-button:hover{
     color: #4b88ca;
 }
@@ -110,7 +130,6 @@ header{
     box-sizing: border-box;
     font-family: 'Eugenio Sans Text','Helvetica Neue',Helvetica,sans-serif;
     position: relative;
-
     max-width: var(--rep-maxwidth);
     margin: 0 auto;
 }
@@ -237,7 +256,15 @@ footer a {
     .first-footer {
         display: none;
     }
+    .third-header{
+        display: none !important;
+    }
+    .weather-info
+    {
+        visibility: collapse;
+    }
 }
+
 h1 {
     display: block;
     font-size: 2em;

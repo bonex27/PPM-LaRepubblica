@@ -47,9 +47,11 @@
 <!-- Header -->
 <!------------>
 <header>
-    <div id="sticky-navbar" class="nav-primary-top row align-content-center container main-header">
-        <div class="col col-3 col-md-4 p-0 d-flex justify-content-start">
-            <a type="button" class="btn nav-header-item" id="sidenav-left-toggle-btn" onclick="onLeftSidenavToggle(this)">
+
+    <div id="sticky-navbar" class="nav-primary-top   main-header">
+        <div class="row align-content-center  main-header-cont">
+        <div class="col col-3 col-md-4 p-0 d-flex align-items-center justify-content-start">
+            <a type="button" class="btn nav-header-item"  id="sidenav-left-toggle-btn" onclick="onLeftSidenavToggle(this)">
                 <i class="fas fa-bars m-auto"></i>
                 <span>Menu</span>
             </a>
@@ -64,10 +66,15 @@
         </div>
 
         <div class="col col-6 col-md-4 d-flex d-inline-flex p-0 justify-content-center">
-            <a class="nav-central-button" href="#">Abbonati</a>
+            <a id="central-subscribe" class="nav-central-button" href="#">Abbonati</a>
+            <img id="mainLogo" src="images/repubblica-logo.svg" style="max-height: 20px" alt="LaRepLogo" class="main-logo"/>
         </div>
 
         <div class="col col-3 col-md-4 p-0 d-flex align-items-center justify-content-end ">
+
+            <a  id="btn-subscribe" type="button" class="btn search-btn nav-header-item btn-subscribe" onclick="toggleSearchbar()">
+                Abbonati
+            </a>
             <a  type="button" class="btn search-btn nav-header-item" onclick="toggleSearchbar()">
                 Gedi Smile
             </a>
@@ -79,52 +86,67 @@
                 <i class="fa fa-user" aria-hidden="true"></i>
             </a>
         </div>
+        </div>
     </div>
 
 <!--Second header-->
     <div class="nav-primary-middle col d-flex justify-content-center sub-header">
-        <div class="container">
+        <div class="container-fluid">
             <div class="col-md-auto">
                 <div class="d-flex justify-content-center">
                     <img id="logo" src="images/repubblica-logo.svg" alt="LaRepLogo" class="main-logo"/>
-
                 </div>
                 <div class="d-flex justify-content-center weather-info">
-                    <div id="today-date"class="sub-header-item">29 Aprile 2024 - Aggiornato alle 13.45</div>
-                    <div class="d-flex justify-content-center">
+                    <div id="today-date" class="sub-header-item">29 Aprile 2024 - Aggiornato alle 13.45</div>
+                    <div class="d-flex justify-content-center weather-search-comp">
                         <img src="images/sun-color-icon.svg" class="nav-small-logo" alt="rep_logo"/>
                         <div class="meteo-temp">
                             22°
                         </div>
                         <div class="weather-search">
                             <label>
-                                <input type="text" class="weather-search" placeholder="Firenze">
+                                <input type="text" class="weather-search" placeholder="Firenze" onfocus="this.value = '';" value="Firenze">
                             </label>
                             <i class="fa-solid fa-magnifying-glass"></i>
                         </div>
 
                     </div>
                 </div>
-
-
-
             </div>
         </div>
     </div>
     <!--Third header-->
-    <div class="d-flex justify-content-center third-header" style="line-height: 40px">
-        <nav class="navbar navbar-light " style="padding: 0">
-            <div class="container-fluid ">
+<!--    <div class="  justify-content-center third-header" style="line-height: 40px">-->
+        <nav class="navbar navbar-default  third-header" >
+            <div class="container-fluid justify-content-center">
                 <div class="dropdown ">
-                    <button class="btn  dropdown-toggle third-header-btn" type="button" id="" data-bs-toggle="dropdown" aria-expanded="false">
+                    <button class="btn  dropdown-toggle third-header-btn" type="button"  data-bs-toggle="dropdown" aria-expanded="false">
                         Sezioni
                     </button>
-                    <ul class="dropdown-menu dropdown-menu-dark col" >
-                        <li><a class="dropdown-item active" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                        <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#">Separated link</a></li>
+                    <ul id="multicol-menu" class="nav pull-right">
+                        <li class="dropdown">
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <div class="row" style="width: var(--rep-maxwidth);">
+                                        <ul class="list-unstyled col-md-4">
+                                            <li><a href="#">test1-1</a></li>
+                                            <li><a href="#">test1-2</a></li>
+                                            <li><a href="#">test1-3</a></li>
+                                        </ul>
+                                        <ul class="list-unstyled col-md-4">
+                                            <li><a href="#">test2-1</a></li>
+                                            <li><a href="#">test2-2</a></li>
+                                            <li><a href="#">test2-3</a></li>
+                                        </ul>
+                                        <ul class="list-unstyled col-md-4">
+                                            <li><a href="#">test3-1</a></li>
+                                            <li><a href="#">test3-2</a></li>
+                                            <li><a href="#">test3-3</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
                     </ul>
                 </div>
                 <div class="dropdown">
@@ -177,7 +199,7 @@
                 </div>
             </div>
         </nav>
-    </div>
+<!--    </div>-->
 
     </div>
 
@@ -204,6 +226,35 @@
 
 
         </div>
+        <div class="main-news mb-5">
+            <article class="main-article row pb-3 mb-2 border-bottom">
+                <div class="col-12 p-0 row d-contents justify-content-center">
+                    <div class="col-12 col-sm-6 col-md-12 col-xl-5 p-0 pe-xl-1">
+                        <a class="subscriber-only" href="#"><h2 class="fw-bolder text-center">Lorem ipsum dolor sit amet incidunt ea ullam hic labore veniam</h2></a>
+                        <!--                        <img src="images/placeholder.png" alt="Main image" class="w-100 d-inline-block d-sm-none d-md-inline-block d-xl-none">-->
+                        <div class="text-center">Lorem ipsum dolor sit amet incidunt ea ullam hic labore veniam, Lorem ipsum dolor sit amet incidunt ea ullam hic labore veniam</div>
+                    </div>
+                    <!--                    <img src="images/placeholder.png" alt="Main image" class="mb-auto col-12 col-sm-6 col-md-12 col-xl-7 pb-xl-1 p-0 d-none d-sm-inline-block d-md-none d-xl-inline-block">-->
+                </div>
+            </article>
+
+
+        </div>
+        <div class="main-news mb-5">
+            <article class="main-article row pb-3 mb-2 border-bottom">
+                <div class="col-12 p-0 row d-contents justify-content-center">
+                    <div class="col-12 col-sm-6 col-md-12 col-xl-5 p-0 pe-xl-1">
+                        <a class="subscriber-only" href="#"><h2 class="fw-bolder text-center">Lorem ipsum dolor sit amet incidunt ea ullam hic labore veniam</h2></a>
+                        <!--                        <img src="images/placeholder.png" alt="Main image" class="w-100 d-inline-block d-sm-none d-md-inline-block d-xl-none">-->
+                        <div class="text-center">Lorem ipsum dolor sit amet incidunt ea ullam hic labore veniam, Lorem ipsum dolor sit amet incidunt ea ullam hic labore veniam</div>
+                    </div>
+                    <!--                    <img src="images/placeholder.png" alt="Main image" class="mb-auto col-12 col-sm-6 col-md-12 col-xl-7 pb-xl-1 p-0 d-none d-sm-inline-block d-md-none d-xl-inline-block">-->
+                </div>
+            </article>
+
+
+        </div>
+
 
 
     </div>
