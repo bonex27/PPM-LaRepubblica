@@ -133,6 +133,7 @@ header .nav-primary-top.fixed-top {
     color: black;
     align-content: center;
     text-transform: uppercase;
+    font-weight: 900;
 }
 
 .nav-central-button:hover{
@@ -167,7 +168,7 @@ header .nav-primary-top.fixed-top {
 .section-title{
     text-align: center;
     font-family: 'Eugenio Sans Text','Helvetica Neue',Helvetica,sans-serif;
-    font-weight: 500;
+    font-weight: 900;
     font-size: 18px;
 
 
@@ -221,8 +222,9 @@ header .nav-primary-top.fixed-top {
 }
 
 .base-article{
-    border-top: 1px solid;
+    border-top: 1px solid gray;
     border-bottom: 1px #4f5054;
+    text-align:center;
 }
 .base-article a{
 
