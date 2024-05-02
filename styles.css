@@ -8,7 +8,6 @@ body {
     }
 }
 
-
 .main-header-cont{
 
 
@@ -113,13 +112,14 @@ header .nav-primary-top.fixed-top {
     font-size: 12px;
     background-color: #eaf4ff;
     border-bottom: 2px solid #f75b00;
-    scrolla
+
 }
 .fourth-header a{
     text-decoration: none;
     color: black;
     align-content: center;
     text-transform: uppercase;
+
 }
 
 .fourth-header a:hover{
@@ -161,7 +161,75 @@ header .nav-primary-top.fixed-top {
     position: relative;
     max-width: var(--rep-maxwidth);
     margin: 0 auto;
+    border-left: 1px solid #999;
+    border-right: 1px solid #999;
 }
+.section-title{
+    text-align: center;
+    font-family: 'Eugenio Sans Text','Helvetica Neue',Helvetica,sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+
+
+}
+.section1{
+    border-top: 1px solid #ebebeb;
+    padding-top: 16px;
+    font-weight: 500;
+    /*padding-left: 8px;*/
+    /*padding-right: 0px;*/
+}
+.left-video-item{
+    border-top: 1px solid;
+}
+.section1 span{
+    font-size: 11px;
+    line-height: 18px;
+    color: #4b88ca;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+    letter-spacing: .4px;
+
+}
+.section1 a{
+    font-size: 13px;
+    text-decoration: none;
+    color: black;
+    align-content: center;
+
+}
+.section1 a:hover{
+    color: #4b88ca;
+}
+
+.left-video-section{
+    background-color: #efefef;
+
+
+}
+.left-video-section span{
+    font-size: 13px;
+    line-height: 18px;
+    color: #4b88ca;
+    text-transform: uppercase;
+    letter-spacing: .4px;
+}
+
+.left-video-section a{
+    font-size: 13px;
+    line-height: 20px;
+    font-family: 'Eugenio Serif',Georgia,Times,'Times New Roman',serif;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: .4px;
+}
+.left-video-section a:hover{
+    color: #4b88ca;
+}
+
+
+
+
 footer {
     display: block;
     unicode-bidi: isolate;
