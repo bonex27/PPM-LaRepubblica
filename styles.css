@@ -179,9 +179,7 @@ header .nav-primary-top.fixed-top {
     /*padding-left: 8px;*/
     /*padding-right: 0px;*/
 }
-.left-video-item{
-    border-top: 1px solid;
-}
+
 .section1 span{
     font-size: 11px;
     line-height: 18px;
@@ -192,7 +190,6 @@ header .nav-primary-top.fixed-top {
 
 }
 .section1 a{
-    font-size: 13px;
     text-decoration: none;
     color: black;
     align-content: center;
@@ -201,11 +198,12 @@ header .nav-primary-top.fixed-top {
 .section1 a:hover{
     color: #4b88ca;
 }
-
+.new-video{
+    font-size: 13px;
+}
 .left-video-section{
     background-color: #efefef;
-
-
+    border-left: 1px solid #ebebeb;
 }
 .left-video-section span{
     font-size: 13px;
@@ -216,18 +214,42 @@ header .nav-primary-top.fixed-top {
 }
 
 .left-video-section a{
-    font-size: 13px;
-    line-height: 20px;
+
+}
+.left-video-section a:hover{
+
+}
+
+.base-article{
+    border-top: 1px solid;
+    border-bottom: 1px #4f5054;
+}
+.base-article a{
+
     font-family: 'Eugenio Serif',Georgia,Times,'Times New Roman',serif;
     font-weight: 900;
     text-transform: uppercase;
-    letter-spacing: .4px;
 }
-.left-video-section a:hover{
+.base-article a:hover{
     color: #4b88ca;
 }
+.article-small-title{
+    font-family: 'Eugenio Sans Text','Helvetica Neue',Helvetica,sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    font-weight: 800;
+    color: #4b88ca;
+    margin: 8px 0 0;
+    text-transform: uppercase;
+}
 
-
+.article-autor-sign{
+    font: italic 500 14px/1 Georgia,Times,'Times New Roman',serif!important;
+}
+.article-main-title{
+    font-family: 'Eugenio Serif',Georgia,Times,'Times New Roman',serif;
+    font-size: 28px;
+}
 
 
 footer {

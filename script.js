@@ -36,7 +36,7 @@ function showStickyNavbar() {
     document.querySelector('#btn-subscribe').classList.remove ("hidden")
     document.querySelector('#central-subscribe').classList.add ("hidden")
 
-    // document.querySelector('#mainLogo').classList.remove ("hidden")
+    document.querySelector('#mainLogo').classList.remove ("hidden")
     document.querySelector('#sticky-navbar').classList.add('fixed-top');
 
 }
@@ -45,7 +45,7 @@ function hideStickyNavbar() {
      document.querySelector('#sticky-navbar').classList.remove('fixed-top');
      document.querySelector('#btn-subscribe').classList.add('hidden');
 
-    // document.querySelector('#mainLogo').classList.add ("hidden")
+    document.querySelector('#mainLogo').classList.add ("hidden")
     document.querySelector('#central-subscribe').classList.remove ("hidden")
 }
 
