@@ -5,9 +5,15 @@ body {
 @media screen and (min-width: 768px)  {
     :root {
         --rep-maxwidth: 996px;
+        --nav-width:50%
     }
 }
 
+@media screen and (max-width: 768px)  {
+    :root {
+        --nav-width:1000%
+    }
+}
 .main-header-cont{
 
 
@@ -43,6 +49,93 @@ header .nav-primary-top.fixed-top {
     align-content: center;
     background-color: white;
     box-shadow: 0 3px 3px rgba(0, 0, 0, 0.25);
+}
+header #searchbar:not(.active) {
+    height: 0;
+    border-top: none;
+}
+header #sidenav-left:not(.active) {
+    width: 0;
+    border-top: none;
+}
+header #sidenav-left {
+    background-color: white;
+    position: fixed;
+    z-index: 2;
+    top: 0px;
+    left: 0;
+    height: 100%;
+    border-top: 1px solid black;
+    width: var(--nav-width);
+    overflow: scroll;
+    transition: width 0.3s ease-in-out;
+}
+header #sidenav-left:not(.active) {
+    width: 0;
+    border-top: none;
+}
+header #sidenav-left .btn.action {
+    /*background-color: var(--main-color);*/
+}
+header #sidenav-left .sidenav-left-content {
+    min-height: 65vh;
+}
+header #sidenav-left .sidenav-left-content ul {
+    list-style: none;
+}
+header #sidenav-left .sidenav-left-content ul li {
+    font-size: 14px;
+    font-weight: bolder;
+    height: 2.65em;
+    margin-left: 5px;
+}
+header #sidenav-left .sidenav-left-content ul li:not(:first-child) i {
+    float: right;
+    font-size: 9px;
+    margin-right: 15px;
+}
+header #sidenav-left .sidenav-left-content ul li a, header #sidenav-left .sidenav-left-content ul li a > * {
+    color: black;
+    text-decoration: none;
+}
+header #sidenav-left .sidenav-left-newsletter {
+    border-top: 1px solid black;
+}
+header #sidenav-left .sidenav-left-newsletter p {
+    font-size: 14px;
+}
+header #sidenav-left .sidenav-left-newsletter button {
+    width: 230px;
+}
+#sidenav-left h3{
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: .6px;
+    text-transform: uppercase;
+    color: #000;
+    text-align: left;
+    padding: 0;
+    margin: 0;
+
+}
+.title_Row
+{
+    padding: 16px;
+    border-top: 1px solid black;
+}
+
+body.overlay {
+    overflow: hidden;
+}
+body.overlay::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 .hidden{
     display: none;
@@ -205,6 +298,8 @@ header .nav-primary-top.fixed-top {
 .left-video-section{
     background-color: #efefef;
     border-left: 1px solid #ebebeb;
+    position: relative;
+
 }
 .left-video-section span{
     font-size: 13px;
@@ -225,6 +320,7 @@ header .nav-primary-top.fixed-top {
     border-top: 1px solid gray;
     border-bottom: 1px #4f5054;
     text-align:center;
+
 }
 .base-article a{
 

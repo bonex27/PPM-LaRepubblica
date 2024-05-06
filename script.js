@@ -4,6 +4,7 @@ window.onload = function () {
 
     document.querySelector('#mainLogo').classList.add ("hidden")
     document.querySelector('#btn-subscribe').classList.add('hidden');
+    onLeftSidenavToggle();
 }
 window.onscroll = stickyNavbarOnScroll;
 function dateForWeatherWidget() {
@@ -21,6 +22,32 @@ function dateForWeatherWidget() {
     // Set date in weather widget
     document.querySelector('#today-date').innerHTML = `${dayNumber} ${month} ${year} - Aggiornato alle ${hour}.${Minutes}`;
     //document.querySelector('#weather-date-sidenav').innerHTML = `${day}, ${month} ${dayNumber}${cardinalSuffix(dayNumber)} ${year}`;
+}
+// Click event for sidebar toggle
+function onLeftSidenavToggle() {
+    // Toggle sidenav
+    if (isLeftSidenavOpen()) closeLeftSidenav();
+    else {
+        //showStickyNavbar();
+        openLeftSidenav();
+    }
+}
+function isLeftSidenavOpen() {
+    return Array.from(document.querySelector('#sidenav-left').classList).includes('active');
+}
+
+function openLeftSidenav() {
+    document.querySelector('#sidenav-left').classList.add('active');
+    document.querySelector('body').classList.add('overlay');
+    document.querySelector('#sidenav-left-toggle-btn').children[0].classList.remove('fa-bars');
+    document.querySelector('#sidenav-left-toggle-btn').children[0].classList.add('fa-times');
+}
+function closeLeftSidenav() {
+    document.querySelector('#sidenav-left').classList.remove('active');
+    document.querySelector('body').classList.remove('overlay');
+    document.querySelector('#sidenav-left-toggle-btn').children[0].classList.remove('fa-times');
+    document.querySelector('#sidenav-left-toggle-btn').children[0].classList.add('fa-bars');
+    stickyNavbarOnScroll();
 }
 
 function stickyNavbarOnScroll() {
