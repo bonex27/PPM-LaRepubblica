@@ -61,14 +61,7 @@ TODO Navbar over left bar
     <div  class="nav-primary-top d-block d-md-none  main-header">
         <div class="row align-content-center  main-header-cont">
             <div class="col col-3 col-md-4 p-0 d-flex align-items-center justify-content-start">
-                <a type="button" class="btn nav-header-item d-none d-md-block"   onclick="onLeftSidenavToggle(this)">
-                    <i class="fas fa-bars m-auto"></i>
-                    <span>Menu</span>
-                </a>
-                <a type="button" class="btn nav-header-item d-none d-md-block"  >
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                    <span>Cerca</span>
-                </a>
+
                 <a type="button" class="btn nav-header-item d-block"  >
                     <i class="fa-solid fa-bell "></i>
                     <span class="d-none d-md-inline">Notifiche</span>
@@ -83,19 +76,11 @@ TODO Navbar over left bar
 
             <div class="col col-3 col-md-4 p-0 d-flex align-items-center justify-content-end ">
 
-                <a   type="button" class="btn search-btn nav-header-item btn-subscribe d-none d-md-block" >
-                    Abbonati
-                </a>
-                <a  type="button" class="btn search-btn nav-header-item d-none d-md-block" >
-                    Gedi Smile
-                </a>
+
                 <a  type="button" class="btn user-menu mx-1 p-0 d-flex align-items-end nav-header-item" onclick="onRightSidenavToggle(this)">
                     <img src="images/smallR.svg" class="nav-small-logo" alt="rep_logo"/>
                 </a>
-                <a type="button" class="btn search-btn nav-header-item d-none d-md-block" onclick="toggleSearchbar()">
-                    Accedi
-                    <i class="fa fa-user" aria-hidden="true"></i>
-                </a>
+
             </div>
         </div>
     </div>
@@ -148,13 +133,12 @@ TODO Navbar over left bar
                 <a type="button" class="btn nav-header-item" >
                     <h2>R</h2>
                 </a>
-
             </div>
             <div class="col col-4 col-md-4  d-flex align-items-center justify-content-center">
                 <div class="input-group">
                     <input class="form-control border-end-0 border" type="search"  placeholder="Ricerca su">
                     <span class="input-group-append">
-                    <button class="btn btn-outline-secondary bg-white border-start-0 border-bottom-0 border ms-n5" type="button">
+                    <button class="btn btn-outline-secondary bg-white border-start-0 border-bottom-0 border " type="button">
                         <i class="fa fa-search"></i>
                     </button>
                 </span>
@@ -266,7 +250,7 @@ TODO Navbar over left bar
     <div class="nav-primary-middle col d-flex justify-content-center sub-header">
         <div class="container-fluid">
             <div class="col-md-auto">
-                <div class="d-flex justify-content-center">
+                <div class="d-flex justify-content-center d-none d-md-flex">
 
                     <h1 id="logo">MainLogo</h1>
 <!--                                        <img id="logo" src="images/repubblica-logo.svg" alt="LaRepLogo" class="main-logo"/>-->
@@ -456,6 +440,44 @@ TODO Navbar over left bar
     <section class="section1 main-section">
         <div class="row m-0 mb-5">
             <div class="col-12 col-md-8 px-2">
+
+                <div class="row m-0 py-2 base-article pb-5" >
+                   <div class="d-flex">
+                    <div class="spinner-grow text-danger" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                       <h3 class="section-title breaking-news text-start">Ultim'ora</h3>
+                   </div>
+                    <div class="row m-0">
+                        <div class="col-12 col-md-8 m-0 pb-0">
+                            <div class="col-12  p-0 px-2">
+                                <img src="images/placeholder.png" alt="First article image" class="w-100">
+                            </div>
+                            <div class="col-12  p-0 px-2 text-start">
+                                <p class="m-0 article-small-title breaking-news">Lorem</p>
+                                <div class="m-0">
+                                    <a class="article-main-title">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</a>
+                                </div>
+                                <p class="m-0 article-autor-sign">
+                                    dal nostro inviato Pietro Bonechi
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col col-md-4 m-0 p-0 ">
+                            <div class="col-12  p-0 px-2">
+                                <img src="images/placeholder.png" alt="First article image" class="w-100">
+                            </div>
+                            <div class="col-12  p-0 px-2 text-start">
+                                <p class="m-0 article-small-title breaking-news">Lorem</p>
+                                <p class="mb-2 ">
+                                    <a class="">Lorem Ipsum has been the industry's</a>
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
                 <div class="row m-0 py-2 base-article">
                     <h3 class="section-title">In evidenza</h3>
                     <div class="row m-0">
@@ -632,8 +654,8 @@ TODO Navbar over left bar
                 </div>
 
             </div>
-            <aside class="col-4 d-none d-md-block  left-video-section  font">
-                <div class="row m-2 p-2 base-article border-0">
+            <aside class="col-4 d-none d-md-block p-0  left-video-section  font">
+                <div class="row p-2 base-article border-0">
                     <h3 class="section-title">Video</h3>
                     <div class="col-12  p-0 px-2">
                         <img src="images/placeholder.png" alt="First article image" class="w-100">
@@ -645,7 +667,7 @@ TODO Navbar over left bar
                         </p>
                     </div>
                 </div>
-                <div class="row m-2 p-2 base-article">
+                <div class="row m-2 p-1 base-article">
                     <h3 class="section-title">Podcast</h3>
                     <div class="col-12  p-0 px-2">
                         <img src="images/placeholder.png" alt="First article image" class="w-100">
@@ -657,7 +679,7 @@ TODO Navbar over left bar
                         </p>
                     </div>
                 </div>
-                <div class="row m-2 py-2 base-article">
+                <div class="row m-2 p-1 base-article">
                     <h3 class="section-title">Podcast</h3>
                     <div class="col-12  p-0 px-2">
                         <img src="images/placeholder.png" alt="First article image" class="w-100">
@@ -669,7 +691,7 @@ TODO Navbar over left bar
                         </p>
                     </div>
                 </div>
-                <div class="row m-2 py-2 base-article">
+                <div class="row m-2 p-1 base-article">
                     <h3 class="section-title">Editoriale</h3>
                     <div class="col-12  p-0 px-2">
                         <img src="https://placehold.co/200" alt="First article image" style="border-radius: 50%" class="">
@@ -686,7 +708,7 @@ TODO Navbar over left bar
         </div>
 
     </section>
-    <section class="section1 d-none d-md-block border-black border-2">
+    <section class="section1 section2  border-black border-2">
         <div class="text-center">
             <h2>Politica <i class="fa-solid fa-chevron-right"></i></h2>
         </div>
@@ -861,84 +883,59 @@ TODO Navbar over left bar
         <div class="row  m-0   blue-article">
             <h3 class="blue-section-title">Cultura</h3>
             <div class="row m-0">
-                <div class="col-12 col-md-2 m-0 p-0 ">
+                <div class="col-12 col-md-3 m-0 p-0 ">
                     <div class="col-12  p-0 px-2">
                         <img src="images/placeholder.png" alt="First article image" class="w-100">
                     </div>
                     <div class="col-12  p-0 px-2 text-start">
                         <p class="m-0 article-small-title">Lorem</p>
                         <p class="mb-2 ">
-                            <a class="">Lorem Ipsum has been the industry's standard dummy text </a>
+                            <a class="">There are many variations of passages of Lorem Ipsum available</a>
                         </p>
                         <p class="m-0 article-autor-sign">
                             di John Doe
                         </p>
                     </div>
                 </div>
-                <div class="col-12 col-md-2 m-0 p-0 ">
+                <div class="col-12 col-md-3 m-0 p-0 ">
                     <div class="col-12  p-0 px-2">
                         <img src="images/placeholder.png" alt="First article image" class="w-100">
                     </div>
                     <div class="col-12  p-0 px-2 text-start">
                         <p class="m-0 article-small-title">Lorem</p>
                         <p class="mb-2 ">
-                            <a class="">Lorem Ipsum has been the industry's standard dummy text </a>
+                            <a class="">The standard chunk of Lorem Ipsum used since the 1500s </a>
                         </p>
                         <p class="m-0 article-autor-sign">
                             di John Doe
                         </p>
                     </div>
                 </div>
-                <div class="col-12 col-md-2 m-0 p-0 ">
+
+                <div class="col-12 col-md-3 m-0 p-0 ">
                     <div class="col-12  p-0 px-2">
                         <img src="images/placeholder.png" alt="First article image" class="w-100">
                     </div>
                     <div class="col-12  p-0 px-2 text-start">
                         <p class="m-0 article-small-title">Lorem</p>
                         <p class="mb-2 ">
-                            <a class="">Lorem Ipsum has been the industry's standard dummy text </a>
+                            <a class="">Latin words, combined with a handful  </a>
                         </p>
                         <p class="m-0 article-autor-sign">
                             di John Doe
                         </p>
                     </div>
                 </div>
-                <div class="col-12 col-md-2 m-0 p-0 ">
+                <div class="col-12 col-md-3 m-0 p-0 ">
                     <div class="col-12  p-0 px-2">
                         <img src="images/placeholder.png" alt="First article image" class="w-100">
                     </div>
                     <div class="col-12  p-0 px-2 text-start">
                         <p class="m-0 article-small-title">Lorem</p>
                         <p class="mb-2 ">
-                            <a class="">Lorem Ipsum has been the industry's standard dummy text </a>
-                        </p>
-                        <p class="m-0 article-autor-sign">
-                            di John Doe
-                        </p>
-                    </div>
-                </div>
-                <div class="col-12 col-md-2 m-0 p-0 ">
-                    <div class="col-12  p-0 px-2">
-                        <img src="images/placeholder.png" alt="First article image" class="w-100">
-                    </div>
-                    <div class="col-12  p-0 px-2 text-start">
-                        <p class="m-0 article-small-title">Lorem</p>
-                        <p class="mb-2 ">
-                            <a class="">Lorem Ipsum has been the industry's standard dummy text </a>
-                        </p>
-                        <p class="m-0 article-autor-sign">
-                            di John Doe
-                        </p>
-                    </div>
-                </div>
-                <div class="col-12 col-md-2 m-0 p-0 ">
-                    <div class="col-12  p-0 px-2">
-                        <img src="images/placeholder.png" alt="First article image" class="w-100">
-                    </div>
-                    <div class="col-12  p-0 px-2 text-start">
-                        <p class="m-0 article-small-title">Lorem</p>
-                        <p class="mb-2 ">
-                            <a class="">Lorem Ipsum has been the industry's standard dummy text </a>
+                            <a class="">The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
+
+                            </a>
                         </p>
                         <p class="m-0 article-autor-sign">
                             di John Doe
@@ -950,7 +947,177 @@ TODO Navbar over left bar
             </div>
         </div>
     </section>
+    <section class="section1 section2  border-black border-2">
+        <div class="text-center">
+            <h2>Economia <i class="fa-solid fa-chevron-right"></i></h2>
+        </div>
+        <div class="row m-0 mb-5 border-top py-4">
+            <div class="col-12 col-md-3 m-0 p-0 border-end">
+                <div class="row m-0">
 
+                    <div class="col-12 m-0  my-2 mx-1 text-start">
+                        <p class="m-0 article-small-title">Lorem</p>
+                        <p class="mb-2 ">
+                            <a class="">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45</a>
+                        </p>
+                        <p class="m-0 article-autor-sign">
+                            di John Doe
+                        </p>
+                        <div class="col-12  py-2">
+                            <img src="images/placeholder.png" alt="First article image" class="w-100">
+                        </div>
+                    </div>
+                    <div class="row m-0 my-2 mx-1 border-top">
+                        <p class="m-0 article-small-title">Lorem</p>
+                        <p class="mb-2 ">
+                            <a class="">Contrary to popular belief, Lorem Ipsum is not simply random text.</a>
+                        </p>
+                        <p class="m-0 article-autor-sign ">
+                            di John Doe
+                        </p>
+                    </div>
+                    <div class="row m-0 my-2 mx-1 border-top">
+                        <p class="m-0 article-small-title">Lorem</p>
+                        <p class="mb-2 ">
+                            <a class="">Contrary to popular belief, Lorem Ipsum is not simply random text.</a>
+                        </p>
+                        <p class="m-0 article-autor-sign ">
+                            di John Doe
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-12 col-md-6 m-0 p-0 ">
+                <div class="col-12  p-0 px-2">
+                    <img src="images/placeholder.png" alt="First article image" class="w-100">
+                </div>
+                <div class="col-12  p-0 px-2 text-center">
+                    <p class="m-0 article-small-title">Lorem</p>
+                    <p class="mb-2 ">
+                        <a class="article-main-title">It is a long established fact that a reader will be distracted by the readable</a>
+                    </p>
+                    <p class="m-0 article-autor-sign">
+                        di John Doe
+                    </p>
+                </div>
+            </div>
+            <div class="col-12 col-md-3 py-5 p-0 border-start">
+                <div class="row m-0 my-2 mx-1 ">
+                        <p class="m-0 article-small-title">Lorem</p>
+                        <p class="mb-2 ">
+                            <a class="">Contrary to popular belief, Lorem Ipsum is not simply random text.</a>
+                        </p>
+                        <p class="m-0 article-autor-sign">
+                            di John Doe
+                        </p>
+                </div>
+                <div class="row m-0 my-2 mx-1 border-top">
+                    <p class="m-0 article-small-title">Lorem</p>
+                    <p class="mb-2 ">
+                        <a class="">Contrary to popular belief, Lorem Ipsum is not simply random text.</a>
+                    </p>
+                    <p class="m-0 article-autor-sign ">
+                        di John Doe
+                    </p>
+                </div>
+                <div class="row m-0 my-2 mx-1 border-top">
+                    <p class="m-0 article-small-title ">Lorem</p>
+                    <p class="mb-2 ">
+                        <a class="">Contrary to popular belief, Lorem Ipsum is not simply random text.</a>
+                    </p>
+                    <p class="m-0 article-autor-sign">
+                        di John Doe
+                    </p>
+                </div>
+                <div class="row m-0 my-2 mx-1 border-top">
+                    <p class="m-0 article-small-title ">Lorem</p>
+                    <p class="mb-2 ">
+                        <a class="">Contrary to popular belief, Lorem Ipsum is not simply random text.</a>
+                    </p>
+                    <p class="m-0 article-autor-sign">
+                        di John Doe
+                    </p>
+                </div>
+
+            </div>
+            <div class="row m-0  py-4 border-top">
+                <div class="col m-0 p-0 ">
+                    <div class="col-12  p-0 px-2">
+                        <img src="images/placeholder.png" alt="First article image" class="w-100">
+                    </div>
+                    <div class="col-12  p-0 px-2 text-start">
+                        <p class="m-0 article-small-title">Lorem</p>
+                        <p class="mb-2 ">
+                            <a class="">Lorem Ipsum has been the industry's standard dummy text </a>
+                        </p>
+                        <p class="m-0 article-autor-sign">
+                            di John Doe
+                        </p>
+                    </div>
+                </div>
+                <div class="col m-0 p-0 ">
+                    <div class="col-12  p-0 px-2">
+                        <img src="images/placeholder.png" alt="First article image" class="w-100">
+                    </div>
+                    <div class="col-12  p-0 px-2 text-start">
+                        <p class="m-0 article-small-title">Lorem</p>
+                        <p class="mb-2 ">
+                            <a class="">Lorem Ipsum has been the industry's standard dummy text </a>
+                        </p>
+                        <p class="m-0 article-autor-sign">
+                            di John Doe
+                        </p>
+                    </div>
+                </div>
+                <div class="col m-0 p-0 ">
+                    <div class="col-12  p-0 px-2">
+                        <img src="images/placeholder.png" alt="First article image" class="w-100">
+                    </div>
+                    <div class="col-12  p-0 px-2 text-start">
+                        <p class="m-0 article-small-title">Lorem</p>
+                        <p class="mb-2 ">
+                            <a class="">Lorem Ipsum has been the industry's standard dummy text </a>
+                        </p>
+                        <p class="m-0 article-autor-sign">
+                            di John Doe
+                        </p>
+                    </div>
+                </div>
+                <div class="col m-0 p-0 ">
+                    <div class="col-12  p-0 px-2">
+                        <img src="images/placeholder.png" alt="First article image" class="w-100">
+                    </div>
+                    <div class="col-12  p-0 px-2 text-start">
+                        <p class="m-0 article-small-title">Lorem</p>
+                        <p class="mb-2 ">
+                            <a class="">Lorem Ipsum has been the industry's standard dummy text </a>
+                        </p>
+                        <p class="m-0 article-autor-sign">
+                            di John Doe
+                        </p>
+                    </div>
+                </div>
+                <div class="col m-0 p-0 ">
+                    <div class="col-12  p-0 px-2">
+                        <img src="images/placeholder.png" alt="First article image" class="w-100">
+                    </div>
+                    <div class="col-12  p-0 px-2 text-start">
+                        <p class="m-0 article-small-title">Lorem</p>
+                        <p class="mb-2 ">
+                            <a class="">Lorem Ipsum has been the industry's standard dummy text </a>
+                        </p>
+                        <p class="m-0 article-autor-sign">
+                            di John Doe
+                        </p>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    </section>
 
 </main>
 

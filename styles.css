@@ -11,12 +11,12 @@ body {
 
 @media screen and (max-width: 768px)  {
     :root {
-        --nav-width:1000%
+        --nav-width:100%
     }
 }
 .main-header-cont{
     min-height: 50px;
-    width: var(--rep-maxwidth);
+    max-width: var(--rep-maxwidth);
     margin-right: auto;
     margin-left: auto;
 }
@@ -177,7 +177,7 @@ body.overlay::before {
     border: 1px solid #999;
     /*border-top: 1px solid #999;*/
     border-bottom: none;
-    width: var(--rep-maxwidth);
+    max-width: var(--rep-maxwidth);
     margin-right: auto;
     margin-left: auto;
 }
@@ -199,7 +199,7 @@ body.overlay::before {
 
 .fourth-header{
     border: 1px solid #999;
-    width: var(--rep-maxwidth);
+    max-width: var(--rep-maxwidth);
     margin-right: auto;
     margin-left: auto;
     font-size: 12px;
@@ -264,13 +264,20 @@ body.overlay::before {
     font-weight: 900;
     font-size: 18px;
 }
+.breaking-news{
+    text-align: left;
+    color: #ec0000 !important;
+    text-transform: uppercase;
+}
 .section1{
     padding-top: 16px;
     font-weight: 500;
     /*padding-left: 8px;*/
     /*padding-right: 0px;*/
 }
-
+.section2 {
+    border-top: 1px solid gray;
+}
 .section1 span{
     font-size: 11px;
     line-height: 18px;
