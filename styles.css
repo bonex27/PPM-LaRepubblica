@@ -41,7 +41,7 @@ header{
 
 }
 
-header .nav-primary-top.fixed-top {
+header .fixed-top {
     position: fixed;
     top: 0;
     align-content: center;
@@ -265,7 +265,6 @@ body.overlay::before {
     font-size: 18px;
 }
 .section1{
-    border-top: 1px solid #ebebeb;
     padding-top: 16px;
     font-weight: 500;
     /*padding-left: 8px;*/
@@ -297,6 +296,8 @@ body.overlay::before {
     background-color: #efefef;
     border-left: 1px solid #ebebeb;
     position: relative;
+
+    border-top: 1px solid black;
 
 }
 .left-video-section span{
