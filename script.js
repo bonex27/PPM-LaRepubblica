@@ -4,7 +4,7 @@ window.onload = function () {
 
     document.querySelector('#mainLogo').classList.add ("hidden")
     document.querySelector('#btn-subscribe').classList.add('hidden');
-    onLeftSidenavToggle();
+    //onLeftSidenavToggle();
 }
 window.onscroll = stickyNavbarOnScroll;
 function dateForWeatherWidget() {

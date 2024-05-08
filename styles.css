@@ -15,8 +15,6 @@ body {
     }
 }
 .main-header-cont{
-
-
     min-height: 50px;
     width: var(--rep-maxwidth);
     margin-right: auto;
@@ -68,11 +66,13 @@ header #sidenav-left {
     border-top: 1px solid black;
     width: var(--nav-width);
     overflow: scroll;
-    transition: width 0.3s ease-in-out;
+
+    display: block;
 }
 header #sidenav-left:not(.active) {
     width: 0;
     border-top: none;
+    display: none;
 }
 header #sidenav-left .btn.action {
     /*background-color: var(--main-color);*/
@@ -263,8 +263,6 @@ body.overlay::before {
     font-family: 'Eugenio Sans Text','Helvetica Neue',Helvetica,sans-serif;
     font-weight: 900;
     font-size: 18px;
-
-
 }
 .section1{
     border-top: 1px solid #ebebeb;
@@ -315,12 +313,23 @@ body.overlay::before {
 .left-video-section a:hover{
 
 }
+.blue-article{
+    background: #eaf4ff;
+    margin-left: 0;
+    margin-right: 12px;
+    border-top: 1px solid black;
+}
+.blue-section-title{
+    text-align: left;
+    font-family: 'Eugenio Sans Text','Helvetica Neue',Helvetica,sans-serif;
+    font-weight: 900;
+    font-size: 18px;
 
+}
 .base-article{
     border-top: 1px solid gray;
     border-bottom: 1px #4f5054;
     text-align:center;
-
 }
 .base-article a{
 
@@ -335,7 +344,7 @@ body.overlay::before {
     font-family: 'Eugenio Sans Text','Helvetica Neue',Helvetica,sans-serif;
     font-size: 13px;
     line-height: 18px;
-    font-weight: 800;
+    font-weight: 900;
     color: #4b88ca;
     margin: 8px 0 0;
     text-transform: uppercase;
@@ -347,6 +356,7 @@ body.overlay::before {
 .article-main-title{
     font-family: 'Eugenio Serif',Georgia,Times,'Times New Roman',serif;
     font-size: 28px;
+    font-weight: 900;
 }
 
 
