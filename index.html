@@ -119,7 +119,7 @@ TODO Navbar over left bar
                 <a id="sidenav-right-toggle-btn" type="button" class="btn user-menu mx-1 p-0 d-none d-md-block align-items-end nav-header-item" onclick="onRightSidenavToggle(this)">
                     <img src="images/smallR.svg" class="nav-small-logo" alt="rep_logo"/>
                 </a>
-                <a id="searchbar-toggle-btn" type="button" class="btn search-btn nav-header-item " onclick="toggleSearchbar()">
+                <a id="searchbar-toggle-btn" type="button" class="btn search-btn nav-header-item">
                     <span class="d-none d-md-block">Accedi</span>
                     <i class="fa fa-user" aria-hidden="true"></i>
                 </a>
@@ -151,6 +151,27 @@ TODO Navbar over left bar
                 </a>
             </div>
         </div>
+        <div class="row p-0 weather-nav">
+            <div class="col-12 py-3 ">
+                <div class="d-flex justify-content-center">
+                    <img src="images/sun-color-icon.svg" class="nav-small-logo" alt="rep_logo"/>
+                <div class="meteo-temp">
+                    22°
+                </div>
+                </div>
+                <div class="col-12 p-2 weather-search justify-content-center">
+                    <label>
+                        <input type="text" class="weather-search" placeholder="Firenze" onfocus="this.value = '';" value="Firenze">
+                    </label>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <div class="col-12 p-4 ">
+                    <a href="#">Tutte le previsioni</a>
+                </div>
+
+            </div>
+        </div>
+
         <div class="row p-0 ">
             <div class="col-12  justify-content-start title_Row">
                 <h3>R  Contenuti per gli abbonati</h3>
@@ -363,9 +384,7 @@ TODO Navbar over left bar
     <div class="d-flex justify-content-center d-none d-md-flex fourth-header">
         <a class="m2-a">Liste Elezioni Europee</a>
         <a class="m-2">Israele</a>
-        <a class="m-2">Ucraina</a>
-        <a class="m-2">Johnson & Johnson</a>
-        <a class="m-2">Concerto 1 Maggio</a>
+        <a class="m-2">Almanacco</a>
         <a class="m-2">Maionchi - Ferro</a>
         <a class="m-2">Sinner</a>
     </div>
@@ -443,7 +462,7 @@ TODO Navbar over left bar
 
                 <div class="row m-0 py-2 base-article pb-5" >
                    <div class="d-flex">
-                    <div class="spinner-grow text-danger" role="status">
+                    <div class="spinner-grow text-danger spinner-border" role="status">
                         <span class="visually-hidden">Loading...</span>
                     </div>
                        <h3 class="section-title breaking-news text-start">Ultim'ora</h3>

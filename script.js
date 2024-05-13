@@ -1,10 +1,10 @@
-const scrollThreshold = 64;
+const scrollThreshold = 51;
 window.onload = function () {
     dateForWeatherWidget();	// Calculate current date for weather widget
 
     document.querySelector('#mainLogo').classList.add ("hidden")
     document.querySelector('#btn-subscribe').classList.add('hidden');
-    //onLeftSidenavToggle();
+    onLeftSidenavToggle();
 }
 window.onscroll = stickyNavbarOnScroll;
 function dateForWeatherWidget() {
@@ -41,12 +41,15 @@ function openLeftSidenav() {
     document.querySelector('body').classList.add('overlay');
     document.querySelector('#sidenav-left-toggle-btn').children[0].classList.remove('fa-bars');
     document.querySelector('#sidenav-left-toggle-btn').children[0].classList.add('fa-times');
+    hideStickyNavbar();
 }
 function closeLeftSidenav() {
     document.querySelector('#sidenav-left').classList.remove('active');
     document.querySelector('body').classList.remove('overlay');
     document.querySelector('#sidenav-left-toggle-btn').children[0].classList.remove('fa-times');
     document.querySelector('#sidenav-left-toggle-btn').children[0].classList.add('fa-bars');
+    if (scroll > scrollThreshold )
+        showStickyNavbar();
     stickyNavbarOnScroll();
 }
 
@@ -55,7 +58,7 @@ function stickyNavbarOnScroll() {
     const scroll = document.documentElement.scrollTop || document.body.scrollTop;
     document.querySelector('.nav-primary-middle').classList.toggle('hidden', scroll > scrollThreshold);
 
-    if (scroll > scrollThreshold) showStickyNavbar();
+    if (scroll > scrollThreshold ) showStickyNavbar();
     else hideStickyNavbar();
 }
 
