@@ -522,3 +522,32 @@ h1 {
     font-weight: bold;
     unicode-bidi: isolate;
 }
+
+main #disclaimer {
+    background-color: white;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    align-items: center;
+    justify-items: center;
+}
+main #disclaimer:not(.visible) {
+    display: none !important;
+}
+
+main #disclaimer .content {
+    width: 80%;
+}
+@media screen and (min-width: 768px) {
+    main #disclaimer .content {
+        width: 50%;
+    }
+}
+
+main #disclaimer .btn {
+    color: white;
+    font-size: 18px;
+}

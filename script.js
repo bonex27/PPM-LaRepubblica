@@ -4,8 +4,24 @@ window.onload = function () {
 
     document.querySelector('#mainLogo').classList.add ("hidden")
     document.querySelector('#btn-subscribe').classList.add('hidden');
-    onLeftSidenavToggle();
+    //onLeftSidenavToggle();
+
+    if (localStorage.getItem('disclaimerAccepted') !== 'true') {
+        document.querySelector('#disclaimer').classList.add('visible');
+        document.querySelector('body').classList.add('overlay');
+    }
 }
+
+
+function acceptDisclaimer() {
+    // Set disclaimer accepted in local storage
+    localStorage.setItem('disclaimerAccepted', 'true');
+
+    // Hide disclaimer
+    document.querySelector('#disclaimer').classList.remove('visible');
+    document.querySelector('body').classList.remove('overlay');
+}
+
 window.onscroll = stickyNavbarOnScroll;
 function dateForWeatherWidget() {
     // Get current date with format "Day, Month Nth YYYY"
