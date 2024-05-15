@@ -317,6 +317,35 @@ body.overlay::before {
 .section1 a:hover{
     color: #4b88ca;
 }
+.sec-podcast h2{
+    border-bottom: 1px solid #5c5c5c;
+    padding-bottom: 15px;
+}
+.sec-podcast{
+    color: white;
+    background: #2d2e2f;
+    border-top: 2px solid #f56100;
+}
+.sec-podcast .article-small-title
+{
+    color: #f56100
+}
+.sec-podcast a
+{
+    color: white;
+}
+.sec-podcast a:hover
+{
+    text-decoration: underline;
+    color: white;
+}
+.sec-podcast .article-autor-sign
+{
+    color: #b4b4b4;
+}
+.special-text{
+    font-family: 'Eugenio Serif', Georgia, Times, 'Times New Roman', serif;
+}
 .new-video{
     font-size: 13px;
 }
