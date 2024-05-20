@@ -134,7 +134,10 @@ body.overlay::before {
     background-color: rgba(0, 0, 0, 0.5);
 }
 .hidden{
-    display: none;
+    display: none ;
+}
+.visible{
+    display: block ;
 }
 .btn-subscribe{
     padding: 17px 16px ;
@@ -239,7 +242,8 @@ body.overlay::before {
     color: #4b88ca;
 }
 .main-logo{
-    min-height: 75px;
+    max-height: 80px;
+    min-height: 70px;
 }
 .nav-central-button{
     text-decoration: none;

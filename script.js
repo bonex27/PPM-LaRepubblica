@@ -80,9 +80,10 @@ function stickyNavbarOnScroll() {
 
 function showStickyNavbar() {
     document.querySelector('#btn-subscribe').classList.remove ("hidden")
-    //document.querySelector('#central-subscribe').classList.add ("hidden")
 
+    // document.querySelector('#central-subscribe').classList.add ("hidden")
     document.querySelector('#mainLogo').classList.remove ("hidden")
+
     document.querySelector('#sticky-navbar-all').classList.add('fixed-top');
 
 }
@@ -92,7 +93,7 @@ function hideStickyNavbar() {
      document.querySelector('#btn-subscribe').classList.add('hidden');
 
     document.querySelector('#mainLogo').classList.add ("hidden")
-    //document.querySelector('#central-subscribe').classList.remove ("hidden")
+    // document.querySelector('#central-subscribe').classList.remove ("hidden")
 }
 
 function hideFooter() {
