@@ -79,7 +79,7 @@ function stickyNavbarOnScroll() {
 }
 
 function showStickyNavbar() {
-    document.querySelector('#btn-subscribe').classList.remove ("hidden")
+    document.querySelector('#btn-subscribe').classList.remove ("hidden-nav-btn")
 
     // document.querySelector('#central-subscribe').classList.add ("hidden")
     document.querySelector('#mainLogo').classList.remove ("hidden")
@@ -90,7 +90,7 @@ function showStickyNavbar() {
 
 function hideStickyNavbar() {
      document.querySelector('#sticky-navbar-all').classList.remove('fixed-top');
-     document.querySelector('#btn-subscribe').classList.add('hidden');
+     document.querySelector('#btn-subscribe').classList.add('hidden-nav-btn');
 
     document.querySelector('#mainLogo').classList.add ("hidden")
     // document.querySelector('#central-subscribe').classList.remove ("hidden")

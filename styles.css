@@ -134,7 +134,10 @@ body.overlay::before {
     background-color: rgba(0, 0, 0, 0.5);
 }
 .hidden{
-    display: none ;
+    display: none;
+}
+.hidden-nav-btn{
+    display: none !important;
 }
 .visible{
     display: block ;
